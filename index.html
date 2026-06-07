@@ -473,6 +473,7 @@ body {
   <button class="nav-btn" data-dept="tobe-production" onclick="show('tobe-production')" style="--dot:var(--dept-production);">Production</button>
   <button class="nav-btn" data-dept="tobe-store" onclick="show('tobe-store')" style="--dot:var(--dept-store);">Store &amp; Procurement</button>
   <button class="nav-btn" data-dept="tobe-transport" onclick="show('tobe-transport')" style="--dot:var(--dept-transport);">Transport</button>
+  <button class="nav-btn" data-dept="tobe-mining" onclick="show('tobe-mining')" style="--dot:#795548;">Coal Mining</button>
   <button class="nav-btn" data-dept="tobe-hr" onclick="show('tobe-hr')" style="--dot:var(--dept-hr);">Human Resources</button>
   <button class="nav-btn" data-dept="tobe-sales" onclick="show('tobe-sales')" style="--dot:var(--dept-sales);">Sales &amp; Marketing</button>
   <button class="nav-btn" data-dept="tobe-finance" onclick="show('tobe-finance')" style="--dot:var(--dept-finance);">Finance</button>
@@ -495,11 +496,11 @@ body {
     <!-- Summary stats -->
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:32px;">
       <div style="background:#0d1e10;border:1px solid var(--green);border-radius:6px;padding:16px;text-align:center;">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:700;color:var(--green);">8</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:700;color:var(--green);">9</div>
         <div style="font-size:11px;color:var(--mist);margin-top:4px;">Departments</div>
       </div>
       <div style="background:#0d1e10;border:1px solid var(--green);border-radius:6px;padding:16px;text-align:center;">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:700;color:var(--green);">48</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:700;color:var(--green);">54</div>
         <div style="font-size:11px;color:var(--mist);margin-top:4px;">Total Processes</div>
       </div>
       <div style="background:#0d1e10;border:1px solid var(--green);border-radius:6px;padding:16px;text-align:center;">
@@ -564,6 +565,16 @@ body {
         <div style="font-size:10px;color:var(--mist);margin-top:4px;">processes</div>
         <div style="margin-top:12px;font-size:11px;color:var(--mist);line-height:1.5;">Dispatch · Fuel · Reconciliation · Maintenance · Insurance · Claim · Bolo · Loans · Outsourced · Return Load</div>
         <div style="margin-top:10px;font-size:10px;color:var(--dept-transport);">Fleet Module · All in Odoo →</div>
+      </div>
+
+      <!-- Coal Mining -->
+      <div onclick="show('tobe-mining')" style="background:#111;border:2px solid #795548;border-radius:8px;padding:20px;cursor:pointer;transition:transform .15s,box-shadow .15s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.5)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="font-size:28px;margin-bottom:8px;">⛏️</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:#795548;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">Coal Mining</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:#795548;line-height:1;">6</div>
+        <div style="font-size:10px;color:var(--mist);margin-top:4px;">processes</div>
+        <div style="margin-top:12px;font-size:11px;color:var(--mist);line-height:1.5;">Daily Production · Raw Coal Transfer · Cost Tracking · Cost Per Tonne · Equipment Management · Safety Reporting</div>
+        <div style="margin-top:10px;font-size:10px;color:#795548;">MO · Inventory · Cost Centres · Fleet →</div>
       </div>
 
       <!-- Human Resources -->
@@ -2472,6 +2483,318 @@ body {
     </div>
 
   </div><!-- /tobe-transport -->
+
+  <!-- ══════════════════════════════════════════
+       TO-BE: COAL MINING
+  ══════════════════════════════════════════ -->
+  <div class="section" id="tobe-mining">
+    <div class="dept-header">
+      <div class="dept-icon" style="background:rgba(121,85,72,.15); border:2px solid #795548;">⛏️</div>
+      <div class="dept-title">
+        <h2 style="color:#795548;">Coal Mining Department — TO-BE (Odoo ERP 19)</h2>
+        <p>6 Processes · Daily Extraction Logging · Raw Coal Transfer · Full Cost Tracking · Cost Per Tonne Analysis · Equipment Management · Safety Reporting</p>
+      </div>
+    </div>
+
+    <!-- Improvements / key points -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin-bottom:28px;">
+      <div style="background:rgba(39,174,96,.08);border:1px solid var(--green);border-radius:4px;padding:10px 14px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--green);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">✓ New</div>
+        <div style="font-size:11px;color:var(--paper);">Daily extraction quantities logged in Odoo against mining production order</div>
+      </div>
+      <div style="background:rgba(39,174,96,.08);border:1px solid var(--green);border-radius:4px;padding:10px 14px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--green);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">✓ New</div>
+        <div style="font-size:11px;color:var(--paper);">All mining costs tagged to mining cost centre in Odoo — site rent, fuel, wages, equipment hire, maintenance</div>
+      </div>
+      <div style="background:rgba(39,174,96,.08);border:1px solid var(--green);border-radius:4px;padding:10px 14px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--green);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">✓ New</div>
+        <div style="font-size:11px;color:var(--paper);">Monthly cost per tonne of mined coal feeds directly into Finance overhead &amp; profitability analysis</div>
+      </div>
+      <div style="background:rgba(39,174,96,.08);border:1px solid var(--green);border-radius:4px;padding:10px 14px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--green);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">✓ New</div>
+        <div style="font-size:11px;color:var(--paper);">Raw coal transfer to coal store via Odoo material transfer order — no paper, no informal communication</div>
+      </div>
+      <div style="background:rgba(39,174,96,.08);border:1px solid var(--green);border-radius:4px;padding:10px 14px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--green);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">✓ New</div>
+        <div style="font-size:11px;color:var(--paper);">Mining vehicles and equipment tracked in Odoo Fleet — owned assets in fixed asset module</div>
+      </div>
+      <div style="background:rgba(39,174,96,.08);border:1px solid var(--green);border-radius:4px;padding:10px 14px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--green);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">✓ New</div>
+        <div style="font-size:11px;color:var(--paper);">Daily safety checks and incidents logged in Odoo — monthly compliance reports generated</div>
+      </div>
+    </div>
+
+    <div class="block-label">① Process Flowchart — TO-BE</div>
+
+    <!-- PROCESS 1: Daily Mining Production Logging -->
+    <div class="flowchart-wrap" style="margin-bottom:20px;">
+      <svg viewBox="0 0 1060 185" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:1060px;">
+        <defs><marker id="mn1-arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#c9a84c"/></marker></defs>
+        <rect x="0" y="0" width="1060" height="22" rx="3" fill="#1a1008"/>
+        <text x="10" y="15" font-family="Bebas Neue" font-size="13" fill="#795548" letter-spacing="2">PROCESS 1 — MINING OPERATIONS &amp; DAILY PRODUCTION LOGGING</text>
+
+        <ellipse cx="65" cy="95" rx="52" ry="20" fill="#795548" stroke="#c9a84c" stroke-width="1.5"/>
+        <text x="65" y="99" text-anchor="middle" font-family="IBM Plex Sans" font-size="10" fill="#fff">START</text>
+        <line x1="117" y1="95" x2="148" y2="95" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn1-arr)"/>
+
+        <rect x="148" y="75" width="185" height="40" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="240" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Mining team extracts</text>
+        <text x="240" y="105" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">raw coal from site</text>
+        <line x1="333" y1="95" x2="363" y2="95" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn1-arr)"/>
+
+        <rect x="363" y="75" width="200" height="40" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="463" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">End of shift/day: supervisor</text>
+        <text x="463" y="105" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">records extraction qty in Odoo</text>
+        <line x1="563" y1="95" x2="593" y2="95" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn1-arr)"/>
+
+        <rect x="593" y="75" width="220" height="40" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="703" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Logged against mining</text>
+        <text x="703" y="105" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#27ae60">production order in Odoo</text>
+        <line x1="813" y1="95" x2="853" y2="95" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn1-arr)"/>
+
+        <rect x="853" y="75" width="175" height="40" rx="4" fill="#2e2e2e" stroke="#27ae60" stroke-width="1.5"/>
+        <text x="940" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Extraction records available</text>
+        <text x="940" y="105" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#27ae60">for reporting in Odoo</text>
+        <line x1="940" y1="115" x2="940" y2="148" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn1-arr)"/>
+        <ellipse cx="940" cy="163" rx="52" ry="18" fill="#795548" stroke="#c9a84c" stroke-width="1.5"/>
+        <text x="940" y="167" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#fff">END P1</text>
+
+        <rect x="0" y="163" width="870" height="22" rx="3" fill="#242424"/>
+        <text x="12" y="177" font-family="IBM Plex Mono" font-size="8" fill="#6b6b6b">Daily extraction logged in Odoo against mining production order · Shift-based or daily · All records available for cost analysis and reporting</text>
+      </svg>
+    </div>
+
+    <!-- PROCESS 2: Raw Coal Transfer to Coal Store -->
+    <div class="flowchart-wrap" style="margin-bottom:20px;">
+      <svg viewBox="0 0 1060 185" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:1060px;">
+        <defs><marker id="mn2-arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#c9a84c"/></marker></defs>
+        <rect x="0" y="0" width="1060" height="22" rx="3" fill="#1a1008"/>
+        <text x="10" y="15" font-family="Bebas Neue" font-size="13" fill="#795548" letter-spacing="2">PROCESS 2 — RAW COAL TRANSFER TO COAL STORE</text>
+
+        <ellipse cx="65" cy="95" rx="52" ry="20" fill="#795548" stroke="#c9a84c" stroke-width="1.5"/>
+        <text x="65" y="99" text-anchor="middle" font-family="IBM Plex Sans" font-size="10" fill="#fff">START</text>
+        <line x1="117" y1="95" x2="148" y2="95" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn2-arr)"/>
+
+        <rect x="148" y="75" width="215" height="40" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="255" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Raw coal stockpiled at mining site</text>
+        <text x="255" y="105" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">ready for transfer</text>
+        <line x1="363" y1="95" x2="393" y2="95" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn2-arr)"/>
+
+        <rect x="393" y="75" width="230" height="40" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="508" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Mining dept raises material</text>
+        <text x="508" y="105" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#27ae60">transfer order in Odoo</text>
+        <line x1="623" y1="95" x2="653" y2="95" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn2-arr)"/>
+
+        <rect x="653" y="75" width="220" height="40" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="763" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Coal store confirms receipt</text>
+        <text x="763" y="105" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#27ae60">in Odoo</text>
+        <line x1="873" y1="95" x2="903" y2="95" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn2-arr)"/>
+
+        <rect x="903" y="75" width="130" height="40" rx="4" fill="#2e2e2e" stroke="#27ae60" stroke-width="1.5"/>
+        <text x="968" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Odoo auto-updates</text>
+        <text x="968" y="105" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#27ae60">coal store stock</text>
+        <line x1="968" y1="115" x2="968" y2="148" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn2-arr)"/>
+        <ellipse cx="968" cy="163" rx="52" ry="18" fill="#795548" stroke="#c9a84c" stroke-width="1.5"/>
+        <text x="968" y="167" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#fff">END P2</text>
+
+        <rect x="0" y="163" width="1060" height="22" rx="3" fill="#242424"/>
+        <text x="12" y="177" font-family="IBM Plex Mono" font-size="8" fill="#6b6b6b">Material transfer order in Odoo · Coal store confirms receipt · Inventory auto-updated · No paper slips · No informal communication</text>
+      </svg>
+    </div>
+
+    <!-- PROCESS 3: Mining Cost Tracking -->
+    <div class="flowchart-wrap" style="margin-bottom:20px;">
+      <svg viewBox="0 0 1060 280" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:1060px;">
+        <defs><marker id="mn3-arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#c9a84c"/></marker></defs>
+        <rect x="0" y="0" width="1060" height="22" rx="3" fill="#1a1008"/>
+        <text x="10" y="15" font-family="Bebas Neue" font-size="13" fill="#795548" letter-spacing="2">PROCESS 3 — MINING COST TRACKING (ODOO COST CENTRE)</text>
+
+        <!-- Info bar -->
+        <rect x="0" y="24" width="1060" height="18" rx="0" fill="#1a1a1a"/>
+        <text x="12" y="36" font-family="IBM Plex Mono" font-size="8" fill="#a8a8a8">All costs tagged to Mining Cost Centre in Odoo · Extractable at any time for reporting and analysis</text>
+
+        <!-- 6 cost category boxes in 2 rows of 3 -->
+        <!-- Row 1 -->
+        <rect x="40" y="55" width="155" height="50" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="117" y="76" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#795548">SITE RENT</text>
+        <text x="117" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="8" fill="#a8a8a8">Recurring cost</text>
+        <text x="117" y="104" text-anchor="middle" font-family="IBM Plex Sans" font-size="8" fill="#27ae60">recorded in Odoo</text>
+
+        <rect x="215" y="55" width="155" height="50" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="292" y="76" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#795548">FUEL</text>
+        <text x="292" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="8" fill="#a8a8a8">Machinery &amp; vehicles</text>
+        <text x="292" y="104" text-anchor="middle" font-family="IBM Plex Sans" font-size="8" fill="#27ae60">recorded in Odoo</text>
+
+        <rect x="390" y="55" width="155" height="50" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="467" y="76" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#795548">EMPLOYEE WAGES</text>
+        <text x="467" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="8" fill="#a8a8a8">Mining site labour</text>
+        <text x="467" y="104" text-anchor="middle" font-family="IBM Plex Sans" font-size="8" fill="#27ae60">via Odoo payroll</text>
+
+        <rect x="565" y="55" width="155" height="50" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="642" y="76" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#795548">VEHICLE &amp; MACH. RENT</text>
+        <text x="642" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="8" fill="#a8a8a8">External hire costs</text>
+        <text x="642" y="104" text-anchor="middle" font-family="IBM Plex Sans" font-size="8" fill="#27ae60">recorded in Odoo</text>
+
+        <rect x="740" y="55" width="145" height="50" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="812" y="76" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#795548">MAINTENANCE</text>
+        <text x="812" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="8" fill="#a8a8a8">Equipment upkeep</text>
+        <text x="812" y="104" text-anchor="middle" font-family="IBM Plex Sans" font-size="8" fill="#27ae60">recorded in Odoo</text>
+
+        <rect x="900" y="55" width="140" height="50" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="970" y="76" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#795548">CONSUMABLES</text>
+        <text x="970" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="8" fill="#a8a8a8">Explosives · drilling</text>
+        <text x="970" y="104" text-anchor="middle" font-family="IBM Plex Sans" font-size="8" fill="#27ae60">recorded in Odoo</text>
+
+        <!-- All arrows pointing down to merge bar -->
+        <line x1="117" y1="105" x2="117" y2="145" stroke="#c9a84c" stroke-width="1.2" marker-end="url(#mn3-arr)"/>
+        <line x1="292" y1="105" x2="292" y2="145" stroke="#c9a84c" stroke-width="1.2" marker-end="url(#mn3-arr)"/>
+        <line x1="467" y1="105" x2="467" y2="145" stroke="#c9a84c" stroke-width="1.2" marker-end="url(#mn3-arr)"/>
+        <line x1="642" y1="105" x2="642" y2="145" stroke="#c9a84c" stroke-width="1.2" marker-end="url(#mn3-arr)"/>
+        <line x1="812" y1="105" x2="812" y2="145" stroke="#c9a84c" stroke-width="1.2" marker-end="url(#mn3-arr)"/>
+        <line x1="970" y1="105" x2="970" y2="145" stroke="#c9a84c" stroke-width="1.2" marker-end="url(#mn3-arr)"/>
+
+        <!-- Merge bar -->
+        <line x1="117" y1="145" x2="970" y2="145" stroke="#c9a84c" stroke-width="1.5"/>
+        <line x1="543" y1="145" x2="543" y2="175" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn3-arr)"/>
+
+        <!-- Total mining cost box -->
+        <rect x="343" y="175" width="400" height="40" rx="4" fill="#2e2e2e" stroke="#27ae60" stroke-width="1.5"/>
+        <text x="543" y="192" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Total mining cost for period extracted from</text>
+        <text x="543" y="205" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#27ae60">Odoo mining cost centre at any time</text>
+
+        <rect x="0" y="258" width="1060" height="22" rx="3" fill="#242424"/>
+        <text x="12" y="272" font-family="IBM Plex Mono" font-size="8" fill="#6b6b6b">All 6 cost categories tagged to Mining Cost Centre in Odoo · Total cost extractable on demand · Feeds into monthly cost per tonne calculation</text>
+      </svg>
+    </div>
+
+    <!-- PROCESS 4: Cost Per Tonne Monthly Analysis -->
+    <div class="flowchart-wrap" style="margin-bottom:20px;">
+      <svg viewBox="0 0 1060 210" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:1060px;">
+        <defs><marker id="mn4-arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#c9a84c"/></marker></defs>
+        <rect x="0" y="0" width="1060" height="22" rx="3" fill="#1a1008"/>
+        <text x="10" y="15" font-family="Bebas Neue" font-size="13" fill="#795548" letter-spacing="2">PROCESS 4 — COST PER TONNE OF MINED COAL (MONTHLY)</text>
+
+        <ellipse cx="55" cy="105" rx="46" ry="20" fill="#795548" stroke="#c9a84c" stroke-width="1.5"/>
+        <text x="55" y="109" text-anchor="middle" font-family="IBM Plex Sans" font-size="10" fill="#fff">START</text>
+        <line x1="101" y1="105" x2="130" y2="105" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn4-arr)"/>
+
+        <rect x="130" y="85" width="200" height="40" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="230" y="102" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Finance pulls total mining costs</text>
+        <text x="230" y="115" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#27ae60">from Odoo cost centre</text>
+        <line x1="330" y1="105" x2="360" y2="105" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn4-arr)"/>
+
+        <rect x="360" y="85" width="215" height="40" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="467" y="102" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Pulls total tonnes extracted</text>
+        <text x="467" y="115" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#27ae60">from Odoo production records</text>
+        <line x1="575" y1="105" x2="605" y2="105" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn4-arr)"/>
+
+        <rect x="605" y="85" width="220" height="40" rx="4" fill="#2e2e2e" stroke="#27ae60" stroke-width="1.5"/>
+        <text x="715" y="102" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Cost per tonne calculated</text>
+        <text x="715" y="115" text-anchor="middle" font-family="IBM Plex Sans" font-size="8" fill="#a8a8a8">total mining cost ÷ total tonnes extracted</text>
+        <line x1="825" y1="105" x2="855" y2="105" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn4-arr)"/>
+
+        <rect x="855" y="85" width="175" height="40" rx="4" fill="#2e2e2e" stroke="#27ae60" stroke-width="1.5"/>
+        <text x="942" y="102" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Monthly mining cost report</text>
+        <text x="942" y="115" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#27ae60">reviewed by dept head &amp; Finance</text>
+        <line x1="942" y1="125" x2="942" y2="158" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn4-arr)"/>
+        <ellipse cx="942" cy="173" rx="52" ry="18" fill="#795548" stroke="#c9a84c" stroke-width="1.5"/>
+        <text x="942" y="177" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#fff">END P4</text>
+
+        <rect x="0" y="190" width="1060" height="20" rx="3" fill="#242424"/>
+        <text x="12" y="203" font-family="IBM Plex Mono" font-size="8" fill="#6b6b6b">Total cost ÷ total tonnes = cost per tonne · Used as raw material input cost in Finance overhead analysis (Process E) · Monthly report for management</text>
+      </svg>
+    </div>
+
+    <!-- PROCESS 5: Vehicle & Equipment Management -->
+    <div class="flowchart-wrap" style="margin-bottom:20px;">
+      <svg viewBox="0 0 1060 185" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:1060px;">
+        <defs><marker id="mn5-arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#c9a84c"/></marker></defs>
+        <rect x="0" y="0" width="1060" height="22" rx="3" fill="#1a1008"/>
+        <text x="10" y="15" font-family="Bebas Neue" font-size="13" fill="#795548" letter-spacing="2">PROCESS 5 — VEHICLE &amp; EQUIPMENT MANAGEMENT</text>
+
+        <ellipse cx="55" cy="95" rx="46" ry="20" fill="#795548" stroke="#c9a84c" stroke-width="1.5"/>
+        <text x="55" y="99" text-anchor="middle" font-family="IBM Plex Sans" font-size="10" fill="#fff">START</text>
+        <line x1="101" y1="95" x2="130" y2="95" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn5-arr)"/>
+
+        <rect x="130" y="75" width="190" height="40" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="225" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">All vehicles &amp; equipment</text>
+        <text x="225" y="105" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#27ae60">registered in Odoo Fleet</text>
+        <line x1="320" y1="95" x2="350" y2="95" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn5-arr)"/>
+
+        <rect x="350" y="75" width="195" height="40" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="447" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Owned assets in Odoo</text>
+        <text x="447" y="105" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#27ae60">fixed asset module</text>
+        <line x1="545" y1="95" x2="575" y2="95" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn5-arr)"/>
+
+        <rect x="575" y="75" width="195" height="40" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="672" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Rented equipment hire costs</text>
+        <text x="672" y="105" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#27ae60">recorded in Odoo</text>
+        <line x1="770" y1="95" x2="800" y2="95" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn5-arr)"/>
+
+        <rect x="800" y="75" width="230" height="40" rx="4" fill="#2e2e2e" stroke="#27ae60" stroke-width="1.5"/>
+        <text x="915" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Fuel consumption · maintenance job</text>
+        <text x="915" y="105" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#27ae60">orders tracked in Odoo</text>
+        <line x1="915" y1="115" x2="915" y2="148" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn5-arr)"/>
+        <ellipse cx="915" cy="163" rx="52" ry="18" fill="#795548" stroke="#c9a84c" stroke-width="1.5"/>
+        <text x="915" y="167" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#fff">END P5</text>
+
+        <rect x="0" y="163" width="1060" height="22" rx="3" fill="#242424"/>
+        <text x="12" y="177" font-family="IBM Plex Mono" font-size="8" fill="#6b6b6b">All vehicles in Odoo Fleet · Owned assets in fixed asset module · Rented equipment costs in Odoo · Fuel &amp; maintenance tracked · Dept head monitors via Odoo</text>
+      </svg>
+    </div>
+
+    <!-- PROCESS 6: Safety & Compliance Reporting -->
+    <div class="flowchart-wrap" style="margin-bottom:28px;">
+      <svg viewBox="0 0 1060 185" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:1060px;">
+        <defs><marker id="mn6-arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#c9a84c"/></marker></defs>
+        <rect x="0" y="0" width="1060" height="22" rx="3" fill="#1a1008"/>
+        <text x="10" y="15" font-family="Bebas Neue" font-size="13" fill="#795548" letter-spacing="2">PROCESS 6 — MINING SITE SAFETY &amp; COMPLIANCE REPORTING</text>
+
+        <ellipse cx="55" cy="95" rx="46" ry="20" fill="#795548" stroke="#c9a84c" stroke-width="1.5"/>
+        <text x="55" y="99" text-anchor="middle" font-family="IBM Plex Sans" font-size="10" fill="#fff">START</text>
+        <line x1="101" y1="95" x2="130" y2="95" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn6-arr)"/>
+
+        <rect x="130" y="75" width="210" height="40" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="235" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Site supervisor records daily</text>
+        <text x="235" y="105" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#27ae60">safety checks in Odoo</text>
+        <line x1="340" y1="95" x2="370" y2="95" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn6-arr)"/>
+
+        <rect x="370" y="75" width="210" height="40" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="475" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Any incidents logged in Odoo</text>
+        <text x="475" y="105" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">with corrective actions noted</text>
+        <line x1="580" y1="95" x2="610" y2="95" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn6-arr)"/>
+
+        <rect x="610" y="75" width="220" height="40" rx="4" fill="#2e2e2e" stroke="#795548" stroke-width="1.5"/>
+        <text x="720" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Monthly compliance report</text>
+        <text x="720" y="105" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#27ae60">generated from Odoo</text>
+        <line x1="830" y1="95" x2="870" y2="95" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn6-arr)"/>
+
+        <rect x="870" y="75" width="165" height="40" rx="4" fill="#2e2e2e" stroke="#27ae60" stroke-width="1.5"/>
+        <text x="952" y="92" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#f4f0e8">Audit trail available</text>
+        <text x="952" y="105" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#27ae60">in Odoo for compliance</text>
+        <line x1="952" y1="115" x2="952" y2="148" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#mn6-arr)"/>
+        <ellipse cx="952" cy="163" rx="52" ry="18" fill="#795548" stroke="#c9a84c" stroke-width="1.5"/>
+        <text x="952" y="167" text-anchor="middle" font-family="IBM Plex Sans" font-size="9" fill="#fff">END P6</text>
+
+        <rect x="0" y="163" width="1060" height="22" rx="3" fill="#242424"/>
+        <text x="12" y="177" font-family="IBM Plex Mono" font-size="8" fill="#6b6b6b">Daily safety checks in Odoo · Incidents logged with corrective actions · Monthly compliance report from Odoo · Audit trail for regulatory purposes</text>
+      </svg>
+    </div>
+
+    <!-- Odoo Modules -->
+    <div style="background:#1a1008;border:1px solid #795548;border-radius:4px;padding:14px 20px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:#795548;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">Odoo 19 Modules — Coal Mining</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;font-size:11px;color:var(--mist);">
+        <div style="border-left:3px solid #795548;padding-left:10px;"><span style="color:var(--paper);">Manufacturing / MO</span><br>Daily extraction logging against mining production order</div>
+        <div style="border-left:3px solid #795548;padding-left:10px;"><span style="color:var(--paper);">Inventory</span><br>Raw coal material transfer order to coal store</div>
+        <div style="border-left:3px solid #795548;padding-left:10px;"><span style="color:var(--paper);">Accounting / Cost Centres</span><br>All 6 cost categories tagged to mining cost centre</div>
+        <div style="border-left:3px solid #795548;padding-left:10px;"><span style="color:var(--paper);">Payroll</span><br>Mining site employee wages processed through Odoo</div>
+        <div style="border-left:3px solid #795548;padding-left:10px;"><span style="color:var(--paper);">Fleet / Fixed Assets</span><br>Owned assets · Rented equipment · Fuel · Maintenance</div>
+        <div style="border-left:3px solid #795548;padding-left:10px;"><span style="color:var(--paper);">Reporting / BI</span><br>Cost per tonne · Monthly mining report · Safety compliance</div>
+      </div>
+    </div>
+
+  </div><!-- /tobe-mining -->
 
   <div class="section" id="tobe-hr">
     <div class="dept-header">
